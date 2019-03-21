@@ -1,0 +1,37 @@
+while True:
+    print("\nCo chcesz ze mną zrobić ? ")
+    print("Aby dwie połówki dodać wpisz + ")
+    print("Jeśli chcesz obliczyć swoją wartość -")
+    print("Dla mistrzów Jedi dzielenie ważne jest, jak promień rozszczepić / ")
+    print("Mnóż wodę jak wino *")
+    print("Wyjście z Matrixa - RP ")
+    user_input = input("Podaj kod operacji :  ")
+
+    if user_input == "RP":
+        break
+    elif user_input=="+":
+        num1 = float(input("Złóż ofertę: "))
+        num2=float(input("Druga kaca powodować może: "))
+        result = str(num1 + num2)
+        print("Tyle stracisz: " + result)
+    elif "-"==user_input:
+        num1 = float(input("Wpisz ile uważasz że jesteś wart : "))
+        num2 = float(input("Twoja pewność siebie: "))
+        result = str(num1 - num2)
+        print("Tyle znaczysz: " + result)
+    elif user_input == "/":
+        num1 = float(input("Strumień zwykły: "))
+        num2 = float(input("Strumień po chwili przejemnośći: "))
+        try:
+            result = str(num1 / num2)
+        except ZeroDivisionError:
+            print("Tłumoku, nie dziel przez zero")
+            print("Koniec zabawy, kłamiesz, bez chwili przemności byś tego nie sprawdzał")
+            print("RP")
+        result = str(num1 / num2)
+        print("Tyle wynosi twój cel: " + result)
+    elif user_input == "*":
+        num1 = float(input("Napisz ile wody jesteś w stanie poświęcić: "))
+        num2 = float(input("Ile wynosi twój boski pierwiastek: "))
+        result = str(num1 * num2)
+        print("\nTak dobra będzie impreza: " + result )
